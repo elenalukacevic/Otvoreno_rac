@@ -1,0 +1,11 @@
+machine_id,location_id,servicer_id,model,status,datum_posljednjeg_servisa,broj_porcioniranja_dnevno,napomena
+1,1,1,Taylor C602,Ispravna,2025-09-12,180,Redovito održavanje
+2,2,2,Taylor C708,Pokvarena,2025-08-28,0,U tijeku narudžba rezervnog dijela
+3,3,3,Taylor C606,U servisu,2025-10-10,0,Zamjena kompresora
+4,4,1,Taylor C708,Ispravna,2025-09-03,210,Nova mašina
+5,5,2,Taylor C706,Pokvarena,2025-07-21,0,Električni kvar – čeka se dijagnostika
+6,6,4,Taylor C602,Ispravna,2025-09-30,160,Sve u redu
+7,7,1,Taylor C606,U servisu,2025-10-05,0,Kvar na sustavu hlađenja
+8,8,2,Taylor C708,Ispravna,2025-09-18,190,Stabilan rad
+9,9,4,Taylor C602,Pokvarena,2025-08-15,0,Motor se pregrijava
+10,10,1,Taylor C706,Ispravna,2025-10-01,170,Redoviti rad bez problema
