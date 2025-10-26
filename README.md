@@ -15,7 +15,7 @@ Skup podataka sadrži 10 zapisa, svaki koji opisuje jednu mašinu. Podaci uklju�
 - **Format:** JSON, CSV
 - **Broj zapisa:** 10
 - **Broj atributa:** 12
-- **Roditelj-dijete veza:** McDonald’s lokacija → Serviser
+- **Roditelj-dijete veza:** McDonald’s lokacija, Serviser
 - **Baza podataka:** PostgreSQL
 - **Atributi:**
   - ID (broj)
