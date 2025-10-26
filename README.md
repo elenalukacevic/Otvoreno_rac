@@ -10,7 +10,7 @@ Skup podataka sadrži 10 zapisa, svaki koji opisuje jednu mašinu. Podaci uklju�
 - **Autor:** Elena Lukačević
 - **Verzija:** 1.0
 - **Jezik:** hrvatski
-- **Licencija:** 
+- **Licencija:** Creative Commons Zero v1.0 Universal
 - **Datum izrade:** 2025-10-26
 - **Format:** JSON, CSV
 - **Broj zapisa:** 10
