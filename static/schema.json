@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://or.fer.unizg.hr/mcd_icecream_machines.json",
+  "title": "McDonald's Ice Cream Machines Dataset",
+  "description": "Skup otvorenih podataka o statusu i karakteristikama McDonald's mašina za sladoled u Hrvatskoj.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["lokacija", "grad", "model", "status"],
+    "properties": {
+      "lokacija": { "type": "string", "description": "Adresa McDonald's restorana" },
+      "grad": { "type": "string", "description": "Grad u kojem se nalazi restoran" },
+      "drzava": { "type": "string" },
+      "gps": { 
+        "type": "object",
+        "properties": {
+          "lat": { "type": "number" },
+          "lon": { "type": "number" }
+        }
+      },
+      "model": { "type": "string" },
+      "status": { "type": "string" },
+      "datum_posljednjeg_servisa": { "type": "string", "format": "date" },
+      "serviser_naziv": { "type": "string" },
+      "serviser_kontakt": { "type": "string" },
+      "broj_porcija_dnevno": { "type": "integer" },
+      "napomena": { "type": "string" }
+    }
+  }
+}

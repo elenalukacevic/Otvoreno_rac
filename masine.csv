@@ -1,0 +1,11 @@
+machine_id,lokacija,grad,serviser,model,status,datum_posljednjeg_servisa,broj_porcioniranja_dnevno,napomena
+1,McDonald's Zagreb - Jurišićeva,Zagreb,ServisPlus d.o.o.,Taylor C602,Ispravna,2025-09-12,180,Redovito održavanje
+2,McDonald's Split - City Center One,Split,FrigoTech Servis,Taylor C708,Pokvarena,2025-08-28,0,U tijeku narudžba rezervnog dijela
+3,McDonald's Rijeka - ZTC,Rijeka,CoolServis Rijeka,Taylor C606,U servisu,2025-10-10,0,Zamjena kompresora
+4,McDonald's Osijek - Avenue Mall,Osijek,ServisPlus d.o.o.,Taylor C708,Ispravna,2025-09-03,210,Nova mašina
+5,McDonald's Varaždin - Supernova,Varaždin,FrigoTech Servis,Taylor C706,Pokvarena,2025-07-21,0,Električni kvar – čeka se dijagnostika
+6,McDonald's Dubrovnik - Lapad,Dubrovnik,Servis Jadran,Taylor C602,Ispravna,2025-09-30,160,Sve u redu
+7,McDonald's Karlovac - Retail Park,Karlovac,ServisPlus d.o.o.,Taylor C606,U servisu,2025-10-05,0,Kvar na sustavu hlađenja
+8,McDonald's Zadar - Supernova,Zadar,FrigoTech Servis,Taylor C708,Ispravna,2025-09-18,190,Stabilan rad
+9,McDonald's Pula - City Mall,Pula,Servis Jadran,Taylor C602,Pokvarena,2025-08-15,0,Motor se pregrijava
+10,McDonald's Sisak - Caprag,Sisak,ServisPlus d.o.o.,Taylor C706,Ispravna,2025-10-01,170,Redoviti rad bez problema

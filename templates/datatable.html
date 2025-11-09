@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Podaci o mašinama</title>
+</head>
+<body>
+  <h1>Podaci o McDonald's mašinama za sladoled</h1>
+
+<form id="filterForm">
+  <input type="text" id="searchText" placeholder="Unesi pojam...">
+  <select id="searchColumn">
+    <option value="all">Svi atributi</option>
+    <option value="lokacija">Lokacija</option>
+    <option value="grad">Grad</option>
+    <option value="serviser">Serviser</option>
+    <option value="model">Model</option>
+    <option value="status">Status</option>
+    <option value="datum_posljednjeg_servisa">Datum posljednjeg servisa</option>
+    <option value="broj_porcija_dnevno">Broj porcija dnevno</option>
+    <option value="napomena">Napomena</option>
+  </select>
+  <button type="submit">Pretraži</button>
+</form>
+
+
+  <table border="1" id="dataTable"></table>
+<p>
+  <a id="downloadJson" href="/api/download/json">Preuzmi JSON</a> |
+  <a id="downloadCsv" href="/api/download/csv">Preuzmi CSV</a>
+</p>
+
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

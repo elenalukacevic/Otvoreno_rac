@@ -1,0 +1,112 @@
+[
+  {
+    "broj_porcioniranja_dnevno": 180,
+    "datum_posljednjeg_servisa": "Fri, 12 Sep 2025 00:00:00 GMT",
+    "grad": "Zagreb",
+    "lokacija": "McDonald's Zagreb - Jurišićeva",
+    "machine_id": 1,
+    "model": "Taylor C602",
+    "napomena": "Redovito održavanje",
+    "serviser": "ServisPlus d.o.o.",
+    "status": "Ispravna"
+  },
+  {
+    "broj_porcioniranja_dnevno": 0,
+    "datum_posljednjeg_servisa": "Thu, 28 Aug 2025 00:00:00 GMT",
+    "grad": "Split",
+    "lokacija": "McDonald's Split - City Center One",
+    "machine_id": 2,
+    "model": "Taylor C708",
+    "napomena": "U tijeku narudžba rezervnog dijela",
+    "serviser": "FrigoTech Servis",
+    "status": "Pokvarena"
+  },
+  {
+    "broj_porcioniranja_dnevno": 0,
+    "datum_posljednjeg_servisa": "Fri, 10 Oct 2025 00:00:00 GMT",
+    "grad": "Rijeka",
+    "lokacija": "McDonald's Rijeka - ZTC",
+    "machine_id": 3,
+    "model": "Taylor C606",
+    "napomena": "Zamjena kompresora",
+    "serviser": "CoolServis Rijeka",
+    "status": "U servisu"
+  },
+  {
+    "broj_porcioniranja_dnevno": 210,
+    "datum_posljednjeg_servisa": "Wed, 03 Sep 2025 00:00:00 GMT",
+    "grad": "Osijek",
+    "lokacija": "McDonald's Osijek - Avenue Mall",
+    "machine_id": 4,
+    "model": "Taylor C708",
+    "napomena": "Nova mašina",
+    "serviser": "ServisPlus d.o.o.",
+    "status": "Ispravna"
+  },
+  {
+    "broj_porcioniranja_dnevno": 0,
+    "datum_posljednjeg_servisa": "Mon, 21 Jul 2025 00:00:00 GMT",
+    "grad": "Varaždin",
+    "lokacija": "McDonald's Varaždin - Supernova",
+    "machine_id": 5,
+    "model": "Taylor C706",
+    "napomena": "Električni kvar – čeka se dijagnostika",
+    "serviser": "FrigoTech Servis",
+    "status": "Pokvarena"
+  },
+  {
+    "broj_porcioniranja_dnevno": 160,
+    "datum_posljednjeg_servisa": "Tue, 30 Sep 2025 00:00:00 GMT",
+    "grad": "Dubrovnik",
+    "lokacija": "McDonald's Dubrovnik - Lapad",
+    "machine_id": 6,
+    "model": "Taylor C602",
+    "napomena": "Sve u redu",
+    "serviser": "Servis Jadran",
+    "status": "Ispravna"
+  },
+  {
+    "broj_porcioniranja_dnevno": 0,
+    "datum_posljednjeg_servisa": "Sun, 05 Oct 2025 00:00:00 GMT",
+    "grad": "Karlovac",
+    "lokacija": "McDonald's Karlovac - Retail Park",
+    "machine_id": 7,
+    "model": "Taylor C606",
+    "napomena": "Kvar na sustavu hlađenja",
+    "serviser": "ServisPlus d.o.o.",
+    "status": "U servisu"
+  },
+  {
+    "broj_porcioniranja_dnevno": 190,
+    "datum_posljednjeg_servisa": "Thu, 18 Sep 2025 00:00:00 GMT",
+    "grad": "Zadar",
+    "lokacija": "McDonald's Zadar - Supernova",
+    "machine_id": 8,
+    "model": "Taylor C708",
+    "napomena": "Stabilan rad",
+    "serviser": "FrigoTech Servis",
+    "status": "Ispravna"
+  },
+  {
+    "broj_porcioniranja_dnevno": 0,
+    "datum_posljednjeg_servisa": "Fri, 15 Aug 2025 00:00:00 GMT",
+    "grad": "Pula",
+    "lokacija": "McDonald's Pula - City Mall",
+    "machine_id": 9,
+    "model": "Taylor C602",
+    "napomena": "Motor se pregrijava",
+    "serviser": "Servis Jadran",
+    "status": "Pokvarena"
+  },
+  {
+    "broj_porcioniranja_dnevno": 170,
+    "datum_posljednjeg_servisa": "Wed, 01 Oct 2025 00:00:00 GMT",
+    "grad": "Sisak",
+    "lokacija": "McDonald's Sisak - Caprag",
+    "machine_id": 10,
+    "model": "Taylor C706",
+    "napomena": "Redoviti rad bez problema",
+    "serviser": "ServisPlus d.o.o.",
+    "status": "Ispravna"
+  }
+]
