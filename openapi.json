@@ -1,0 +1,257 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Ice Cream Machines API",
+    "description": "REST API za upravljanje masinama za sladoled",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Elena Lukacevic",
+      "email": "elena.lukacevic@fer.hr"
+    },
+    "license": {
+      "name": "CC0 1.0 Universal"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000"
+    }
+  ],
+  "paths": {
+    "/api/masine": {
+      "get": {
+        "summary": "Dohvat svih mašina",
+        "parameters": [
+          {
+            "name": "filter",
+            "in": "query",
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "column",
+            "in": "query",
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Uspješan dohvat" },
+          "500": { "description": "Greška na serveru" }
+        }
+      },
+      "post": {
+        "summary": "Dodavanje nove mašine",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/MachineCreate" }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Mašina dodana" },
+          "400": { "description": "Neispravni podaci" }
+        }
+      }
+    },
+    "/api/masine/{machine_id}": {
+      "get": {
+        "summary": "Dohvat mašine po ID-u",
+        "parameters": [
+          {
+            "name": "machine_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Mašina pronađena" },
+          "404": { "description": "Nije pronađena" }
+        }
+      },
+      "put": {
+        "summary": "Ažuriranje mašine",
+        "parameters": [
+          {
+            "name": "machine_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/MachineUpdate" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Ažurirano" },
+          "404": { "description": "Nije pronađena" }
+        }
+      },
+      "delete": {
+        "summary": "Brisanje mašine",
+        "parameters": [
+          {
+            "name": "machine_id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Obrisano" },
+          "404": { "description": "Nije pronađena" }
+        }
+      }
+    },
+    "/api/masine/grad/{grad}": {
+      "get": {
+        "summary": "Dohvat mašina po gradu",
+        "parameters": [
+          {
+            "name": "grad",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Uspješan dohvat" }
+        }
+      }
+    },
+    "/api/masine/porcije/{min_porcija}": {
+      "get": {
+        "summary": "Dohvat mašina prema minimalnom broju porcija",
+        "parameters": [
+          {
+            "name": "min_porcija",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Uspješan dohvat" }
+        }
+      }
+    },
+    "/api/masine/statistika": {
+      "get": {
+        "summary": "Statistika mašina",
+        "responses": {
+          "200": { "description": "Statistika dohvaćena" }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "MachineCreate": {
+        "type": "object",
+        "required": ["location_id", "servicer_id", "model", "status"],
+        "properties": {
+          "location_id": { "type": "integer" },
+          "servicer_id": { "type": "integer" },
+          "model": { "type": "string" },
+          "status": { "type": "string" },
+          "datum_posljednjeg_servisa": { "type": "string", "format": "date" },
+          "broj_porcioniranja_dnevno": { "type": "integer" },
+          "napomena": { "type": "string" }
+        }
+      },
+      "MachineUpdate": {
+        "type": "object",
+        "properties": {
+          "location_id": { "type": "integer" },
+          "servicer_id": { "type": "integer" },
+          "model": { "type": "string" },
+          "status": { "type": "string" },
+          "datum_posljednjeg_servisa": { "type": "string", "format": "date" },
+          "broj_porcioniranja_dnevno": { "type": "integer" },
+          "napomena": { "type": "string" }
+        }
+      }
+    }
+  },
+  "/api/download/json": {
+  "get": {
+    "summary": "Preuzimanje podataka u JSON formatu",
+    "description": "Preuzima filtrirane podatke o mašinama u JSON formatu",
+    "parameters": [
+      {
+        "name": "filter",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Tekst za filtriranje podataka"
+      },
+      {
+        "name": "column",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Atribut po kojem se filtrira"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "JSON uspješno generiran"
+      },
+      "404": {
+        "description": "Nema podataka za izvoz"
+      },
+      "500": {
+        "description": "Greška na serveru"
+      }
+    }
+  }
+},
+"/api/download/csv": {
+  "get": {
+    "summary": "Preuzimanje podataka u CSV formatu",
+    "description": "Preuzima filtrirane podatke o mašinama u CSV formatu",
+    "parameters": [
+      {
+        "name": "filter",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Tekst za filtriranje podataka"
+      },
+      {
+        "name": "column",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Atribut po kojem se filtrira"
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "CSV datoteka uspješno generirana"
+      },
+      "404": {
+        "description": "Nema podataka za izvoz"
+      },
+      "500": {
+        "description": "Greška na serveru"
+      }
+    }
+  }
+}
+
+}

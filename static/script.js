@@ -1,4 +1,4 @@
-// sigurno prenosenje parametara za filtriranje za download
+// sigurno prenošenje parametara za filtriranje za download
 function updateDownloadLinks(filter = '', column = 'all') {
   const csvLink = document.getElementById('downloadCsv');
   const jsonLink = document.getElementById('downloadJson');
@@ -7,28 +7,40 @@ function updateDownloadLinks(filter = '', column = 'all') {
   jsonLink.href = `/api/download/json?filter=${encodeURIComponent(filter)}&column=${encodeURIComponent(column)}`;
 }
 
-// dinamicko mjenjanje parametara i azuriranje linkova
+// dinamičko dohvaćanje podataka s API-ja
 async function fetchData(filter = '', column = 'all') {
-  const res = await fetch(`/api/masine?filter=${filter}&column=${column}`);
-  const data = await res.json();
-  renderTable(data.response);
+  const res = await fetch(`/api/masine?filter=${encodeURIComponent(filter)}&column=${encodeURIComponent(column)}`);
+  const json = await res.json();
+
+  renderTable(json.data);
+
   updateDownloadLinks(filter, column);
 }
 
-// dinamicki prikaz tablice
+// dinamički prikaz tablice
 function renderTable(data) {
   const table = document.getElementById('dataTable');
-  if (!data.length) {
+
+  if (!data || data.length === 0) {
     table.innerHTML = '<tr><td>Nema podataka</td></tr>';
     return;
   }
 
   const cols = Object.keys(data[0]);
+
   let html = '<tr>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr>';
-  html += data.map(row => '<tr>' + cols.map(c => `<td>${row[c]}</td>`).join('') + '</tr>').join('');
+  html += data
+    .map(row =>
+      '<tr>' +
+      cols.map(c => `<td>${row[c] ?? ''}</td>`).join('') +
+      '</tr>'
+    )
+    .join('');
+
   table.innerHTML = html;
 }
 
+// filtriranje
 document.getElementById('filterForm').addEventListener('submit', e => {
   e.preventDefault();
   const text = document.getElementById('searchText').value;
@@ -36,6 +48,7 @@ document.getElementById('filterForm').addEventListener('submit', e => {
   fetchData(text, col);
 });
 
-// dohvacanje podataka
+// inicijalni dohvat podataka
 fetchData();
+
 
